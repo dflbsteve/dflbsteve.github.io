@@ -1,0 +1,62 @@
+{
+  "source_base_path": "/Users/kalicokat/Desktop/Development/PersonalSite",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "posts/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "posts/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "posts/the-properties-of-data.md",
+      "output": {
+        ".html": {
+          "relative_path": "posts/the-properties-of-data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "posts/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "posts/toc.html"
+        },
+        ".json": {
+          "relative_path": "posts/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
