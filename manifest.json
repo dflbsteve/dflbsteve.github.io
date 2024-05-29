@@ -32,6 +32,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "posts/solving-ui-stalling-in-a-blazor-timer-application.md",
+      "output": {
+        ".html": {
+          "relative_path": "posts/solving-ui-stalling-in-a-blazor-timer-application.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "posts/the-properties-of-data.md",
       "output": {
         ".html": {

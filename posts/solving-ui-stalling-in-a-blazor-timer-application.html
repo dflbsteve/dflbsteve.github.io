@@ -80,9 +80,53 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="">
+        <article data-uid="29-05-2024-1">
 
-<meta http-equiv="refresh" content="0; url=./solving-ui-stalling-in-a-blazor-timer-application.html">
+<h2 id="solving-ui-stalling-in-a-blazor-timer-application">Solving UI Stalling in a Blazor Timer Application</h2>
+<h6>Date: 29/05/2024</h6>  
+<br>
+<p>I recently worked on a personal a project where I built a Blazor application featuring a countdown timer that regenerates a challenge code once it hits zero. The timer had to be displayed on the UI and update every second. However, I ran into an issue: the timer was stalling, making the user experience less than stellar. Here's how I resolved it.
+<br></p>
+<h3 id="learning-process">Learning Process</h3>
+<ol>
+<li><strong>Initial Implementation</strong>: I started with the basics, using various timer classes like <code>System.Threading.Timer</code> and <code>System.Timers.Timer</code> to get the countdown running.</li>
+<li><strong>Debugging</strong>: Soon, I noticed that the timer was stalling at irregular intervals. This led me down a rabbit hole of debugging and performance analysis.</li>
+<li><strong>Community and Documentation</strong>: I turned to online resources, documentation, and forums for advice to understand the root cause.
+<br></li>
+</ol>
+<h3 id="challenges">Challenges</h3>
+<ol>
+<li><strong>UI Stalling</strong>: The countdown timer on the UI would occasionally freeze, disrupting the user experience.</li>
+<li><strong>Thread Management</strong>: Managing the UI thread and timer thread was tricky, especially when the timer had to update the UI.</li>
+<li><strong>API Calls</strong>: Regenerating the challenge code required an API call, which risked blocking the UI.
+<br></li>
+</ol>
+<h3 id="factors-considered">Factors Considered</h3>
+<ol>
+<li><strong>Performance</strong>: The timer needed to be accurate and avoid causing performance issues.</li>
+<li><strong>User Experience</strong>: The UI had to be responsive, offering immediate feedback.</li>
+<li><strong>Code Maintainability</strong>: The solution needed to be clean, maintainable, and adhere to best practices.</li>
+<li><strong>Exception Handling</strong>: The code had to gracefully handle any exceptions or errors.
+<br></li>
+</ol>
+<h3 id="resolution">Resolution</h3>
+<ol>
+<li><strong>UI Thread</strong>: I moved the timer logic to run as a background task on the UI main thread to avoid cross-thread issues.</li>
+<li><strong>Async API Calls</strong>: I used asynchronous programming to ensure that API calls didn't block the UI.</li>
+<li><strong>Immediate Feedback</strong>: I provided immediate feedback on the UI by setting placeholders before making API calls.</li>
+<li><strong>Exception Handling</strong>: I added try-catch blocks to handle exceptions and log errors effectively.
+<br></li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>With these changes, the timer now runs smoothly, updating every second without stalling the UI. The challenge regenerates as expected, and the overall user experience is much improved. This project was a great learning experience in debugging, performance optimisation, and asynchronous programming in Blazor.</p>
+<h4 id="lessons-learned">Lessons Learned</h4>
+<ol>
+<li><strong>Understanding Threading in UI Applications</strong>: It's crucial to grasp how threading works to avoid UI stalling.</li>
+<li><strong>Value of Asynchronous Programming</strong>: Async programming is key to keeping the UI responsive.</li>
+<li><strong>Robust Exception Handling</strong>: Good exception handling is essential for building resilient applications.</li>
+</ol>
+<br>
+<p>In the end, this journey taught me a lot about the intricacies of UI development and how to keep things running smoothly. If you're facing similar issues, I hope these insights help you out!</p>
 
 </article>
 
